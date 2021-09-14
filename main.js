@@ -12,18 +12,18 @@ class Producto{
 
 
     vender(){
-    if (this.producto == "ACEITUNAS" && this.tamanio == "GRANDE") {
+    if (this.tipo == "ACEITUNAS" && this.tamanio == "GRANDE") {
         this.precio = 350;           
-    }else if (this.producto == "ACEITUNAS" && this.tamanio == "CHICO") {
+    }else if (this.tipo == "ACEITUNAS" && this.tamanio == "CHICO") {
         this.precio = 250;
-    }else if(this.producto == "QUESOS"){
+    }else if(this.tipo == "QUESOS"){
         this.precio = 400;
     }
     
     if (this.stock != 0) {
         this.vendido = true;
         this.stock =- 1;
-        return "gracias por comprar el precio total es de " + this.precio
+        return "gracias por comprar " + this.tipo + " " + this.nombre + " el precio total es de " + this.precio
     }else{
         return "Lo sentimos, no hay stock"
     }
@@ -58,10 +58,169 @@ productos.push(new Producto("aceitunas", "palmitos","chico","19","20"));
 productos.push(new Producto("aceitunas", "ajo","chico","20","20"));
 
 //quesos
-productos.push(new Producto("quesos", "picante","grande","21","20"));
-productos.push(new Producto("quesos", "pimienta","grande","22","20"));
-productos.push(new Producto("quesos", "mediterraneo","grande","23","20"));
+productos.push(new Producto("quesos", "picante","","21","20"));
+productos.push(new Producto("quesos", "pimienta","","22","20"));
+productos.push(new Producto("quesos", "mediterraneo","","23","20"));
 
-const quesos = productos.filter("quesos")
+var producto1 = prompt("Indique el producto a llevar: aceituns chicas, aceitunas grandes o quesos");
 
-console.log(quesos)
+if(producto1.toUpperCase() == "QUESOS"){
+
+    var producto2 = prompt("picante, mediterraneo o pimienta?");
+
+    if(producto2.toUpperCase() == "PIMIENTA"){
+        const pimienta = productos.filter(relleno => relleno.nombre == "PIMIENTA");
+        for (const frasco of pimienta) {
+            alert(frasco.vender())
+        }
+    }else if(producto2.toUpperCase()== "MEDITERRANEO"){
+        const mediterraneo = productos.filter(relleno => relleno.nombre == "MEDITERRANEO" );
+        for(const frasco of mediterraneo){
+            alert(frasco.vender())
+        }
+    }else if(producto2.toUpperCase()=="PICANTE"){
+        const picante = productos.filter(relleno => relleno.nombre == "PICANTE")
+        for(const frasco of picante){
+            alert(frasco.vender())
+        }
+    }else{
+        alert(producto2 + " no es un sabor de quesos valido.")
+    }
+
+}else if(producto1.toUpperCase() == "ACEITUNAS CHICAS"){
+
+    const aceitunasChicas = productos.filter(producto => producto.tamanio =="CHICO");
+    var producto3 = prompt("almendras, capresse, ajo, palmitos, mix picada, mix quesos, mix clasico, salame, crudo, cheddar, holanda o roquefort?")
+    producto3 = producto3.toUpperCase();
+
+    if(producto3 == "ALMENDRAS"){
+        const almendrasChico = aceitunasChicas.filter(relleno => relleno.nombre == "ALMENDRAS");
+        for(const frasco of almendrasChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 =="CAPRESSE"){
+        const capresseChico = aceitunasChicas.filter(relleno => relleno.nombre == "CAPRESSE");
+        for(const frasco of capresseChico){
+            alert(frasco.vender())
+        }
+
+    }else if(producto3 == "AJO"){
+        const ajoChico = aceitunasChicas.filter(relleno => relleno.nombre == "AJO");
+        for(const frasco of ajoChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "PALMITOS"){
+        const palmitosChico = aceitunasChicas.filter(relleno => relleno.nombre == "PALMITOS");
+        for(const frasco of palmitosChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "MIX PICADA"){
+        const mixPicadaChico = aceitunasChicas.filter(relleno => relleno.nombre == "MIX PICADA");
+        for(const frasco of mixPicadaChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "MIX QUESOS"){
+        const mixQuesosChico = aceitunasChicas.filter(relleno => relleno.nombre == " MIX QUESOS" );
+        for(const frasco of mixQuesosChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "MIX CLASICO"){
+        const mixClasicoChico = aceitunasChicas.filter(relleno => relleno.nombre == "MIX CLASICO");
+        for(const frasco of mixClasicoChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "SALAME"){
+        const salameChico = aceitunasChicas.filter(relleno => relleno.nombre == "SALAME");
+        for(const frasco of salameChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "CRUDO"){
+        const crudoChico = aceitunasChicas.filter(relleno => relleno.nombre == "CRUDO");
+        for(const frasco of crudoChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "CHEDDAR" ){
+        const cheddarChico = aceitunasChicas.filter(relleno => relleno.nombre == "CHEDDAR");
+        for (const frasco of cheddarChico){
+            alert(frasco.vender());
+        }
+
+    }else if (producto3 == "HOLANDA"){
+        const holandaChico = aceitunasChicas.filter(relleno => relleno.nombre == "HOLANDA");
+        for(const frasco of holandaChico){
+            alert(frasco.vender());
+        }
+
+    }else if(producto3 == "ROQUEFORT"){
+        const roqueChico = aceitunasChicas.filter(relleno => relleno.nombre == "ROQUEFORT");
+        for(const frasco of roqueChico){
+            alert(frasco.vender());
+        }  
+
+     }
+}else if(producto1.toUpperCase() == "ACEITUNAS GRANDES"){
+    const aceitunasGrandes = productos.filter(producto => producto.tamanio =="GRANDE");
+    var producto4 = prompt("mix picada, mix quesos, mix clasico, salame, crudo, cheddar, holanda o roquefort?")
+    producto4 =  producto4.toUpperCase();
+    if(producto4 == "MIX PICADA"){
+        const mixPicadaGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "MIX PICADA");
+        for(const frasco of mixPicadaGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "MIX QUESOS"){
+        const mixQuesosGrande = aceitunasGrandes.filter(relleno => relleno.nombre == " MIX QUESOS" );
+        for(const frasco of mixQuesosGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "MIX CLASICO"){
+        const mixClasicoGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "MIX CLASICO");
+        for(const frasco of mixClasicoGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "SALAME"){
+        const salameGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "SALAME");
+        for(const frasco of salameGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "CRUDO"){
+        const crudoGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "CRUDO");
+        for(const frasco of crudoGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "CHEDDAR" ){
+        const cheddarGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "CHEDDAR");
+        for (const frasco of cheddarGrande){
+            alert(frasco.vender());
+        }
+
+    }else if (producto4 == "HOLANDA"){
+        const holandaGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "HOLANDA");
+        for(const frasco of holandaGrande){
+            alert(frasco.vender());
+        }
+
+    }else if(producto4 == "ROQUEFORT"){
+        const roqueGrande = aceitunasGrandes.filter(relleno => relleno.nombre == "ROQUEFORT");
+        for(const frasco of roqueGrande){
+            alert(frasco.vender());
+        }  
+
+     }
+}
+
+
+
+
