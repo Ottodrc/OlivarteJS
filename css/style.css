@@ -1,0 +1,1211 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+body {
+    background-color:#fffbff;
+    background-size: contain;
+    height: auto;
+}
+.parrafos{
+    color: #4F772D;
+    text-align: center;
+    font-family:'Lora', serif;
+    font-style:normal;
+    font-size: 32px;
+    font-weight: 500;
+  
+}
+.titulo{ 
+    color: #31572C;
+    text-align: center;
+    font-family: 'Rouge Script', cursive;
+    font-style: normal;
+    font-weight: normal;
+
+}
+li{
+    font-family:'Lora', serif;
+    list-style: none;
+}
+ul{
+  padding: 0rem;
+  margin: 0rem;
+}
+
+
+/**menu*/
+header{
+  grid-area: nav;
+  height: fit-content;
+}
+#logo{
+  width: fit-content;
+  align-self: center;
+}
+#logo > a{
+  color: #eef788;
+  font-family: 'Rouge Script', cursive;;
+  text-decoration: none;
+  font-size: 40px;
+}
+.menu{
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  border-bottom: 1px  rgba(27, 32, 26, 0.979) solid;
+  width: 100%;
+  background-color: #90A955;
+
+}
+.menu > ul {
+  width:800px;
+  height: 100%;
+  display: flex; 
+  justify-content: flex-end;
+}
+.menu > ul > li > a {
+  color: #eef788;
+  text-decoration: none;
+}
+.menu > ul > li > a:hover{
+  color: #212529;
+}
+
+/**fin de menu*/
+
+
+/*!galería*/
+.galeria{
+  grid-area: media;
+  align-items: center;
+  display:flex ;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.galeria__div{
+  width:80% ;
+  height: 100%;
+}
+.galeria__img{
+  width: 100%;
+  height: auto;
+}
+.galeria__img:hover{
+  transform: scale(105%);
+}
+
+/**fin de la galería*/
+
+
+/*!footer*/
+.divFoot{
+  grid-area: footer;
+  height:fit-content;
+  align-self: end;
+  background-color: #90A955;
+}
+.redesSociales{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+}
+.redesSociales .icono{
+
+  color: #eef788;
+  text-align: center;
+}
+.icono:hover {
+  color: #212529;
+}
+.redesSociales > p{
+  color: #eef788;
+  font-family:'Lora', serif;
+  margin: 0rem;
+}
+/**Fin del footer*/
+
+
+/*!form*/  
+#form{
+  background-image:url(tresTunas.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+    grid-area: form;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+.form-control:focus {
+  border-color: #93a862;
+  box-shadow: 0 0 0 0.25rem rgb(20 99 10/ 30%);
+}
+.btn-primary  {
+  background-color: #4F772D;
+  border: #4F772D;
+}
+.btn{
+  margin-bottom: 5px;
+}
+.btn-primary:hover {
+ 
+  background-color: #212529;
+  border-color: #212529;
+}
+/**fin del form*/
+
+
+/*!Quienes Somos*/
+#quienSomos{
+  grid-area: titu;
+}
+#historia{
+  grid-area: parrafos;
+  justify-self: center;
+  align-self: flex-start;
+  margin-left: 10px;
+}
+#historia > p {
+  margin-bottom: 0px;
+}
+
+
+/*!galeria*/
+
+#media1{
+  justify-self: center;
+  align-self: flex-start;
+}
+#media1 > img{
+  width: 100%;
+  height: auto;
+}
+#media2{
+  justify-self: center;
+  align-self: flex-end;
+}
+#media2 > img{
+  width: 100%;
+  height: auto;
+}
+/**fin galeria*/
+/**fin quienes somos*/
+
+
+/*!Medias queries*/
+/**dispositivos XS*/
+@media only screen and (max-width:600px){
+  
+  #grilla1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.2fr 0.7fr 1fr 1.6fr 6fr 2fr;
+    grid-template-areas: "nav nav"
+                        "titu titu"
+                        "parrafos parrafos"
+                        "carrusel carrusel"
+                        "cliente cliente"
+                        "footer footer";
+  
+  }
+
+  #titulo{
+	  align-self: center;
+    margin: none; 
+	  grid-area: titu;
+    height: 65px;
+    
+  } 
+  .titulo{
+    font-size: 64px;
+  }
+  #titulo > h1{
+    margin: 0;
+    height: 100%;
+  }
+  #parrafo{
+  grid-area: parrafos;
+  height: fit-content;
+  } 
+  #parrafo > p{
+    margin: 0;
+  }
+  .parrafos{
+    font-size: 20px;
+  }
+#clientes{
+  grid-area: cliente;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.clientesDiv{
+  display: flex;
+  flex-direction: row;
+}
+.clientesDiv > img{
+  height: 150px;
+  width: 150px;
+  border: 2px solid #eef788;
+  border-radius: 73px;
+}
+.clientesP{
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+}
+.clientesDiv .clientesP > p{
+  font-family:'Lora', serif;
+  height: fit-content;
+  font-size: 20px;
+  justify-self: center;
+  align-self: center;
+  color: #4F772D;
+  margin: 0px 10px;
+}
+
+/*menu*/
+#logo > a{
+  font-size: 64px;
+}
+.menu {
+  font-size: 15px;
+  height: 120px;
+}
+.menu > ul  {
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+
+}
+.menu > ul > li{
+  list-style: none;
+  height: fit-content;
+}
+.menu > ul > li > a {
+  margin: 0px 5px;
+}
+#olivArte{  
+  font-size: 40px;
+  height: 91px;
+}
+/*fin del menu*/
+/*carrusel*/
+#galeria{
+  grid-area: titulo;
+}
+#carruselo{
+
+  grid-area: carrusel;
+  justify-self: flex-start;
+  align-self: center;
+  width: 100%;
+}
+
+.carousel-inner{
+  height: fit-content;
+  width: 100%;
+}
+
+/*fin carrusel*/
+/*!footer*/
+
+.divFoot{
+  display: flex;
+  justify-content: center;
+
+  height:200px;
+  border-top: 1px rgba(27, 32, 26, 0.979)solid;
+  grid-area: footer;
+}
+.tituloFoot{
+
+  width:fit-content;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  justify-self: center;
+  align-self: center;
+  margin: 0%;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+  grid-template-areas: "con red"
+                      "datos redes"
+                      "csgo csgo"
+                      "pago pago";
+
+  height: 100%;
+  width: 100%;
+}
+.datos{
+grid-area: datos;
+width: fit-content;
+justify-self: center;
+font-family: 'Ubuntu', sans-serif;
+font-size: 12px;
+
+
+}
+.datos > p {
+  width: 100%;
+}
+.redesSociales{
+grid-area: redes;
+height: 100%;
+justify-content:space-evenly;
+align-items: center;
+}
+.redesSociales .icono{
+
+  color: #eef788;
+  text-align: center;
+}
+.icono:hover {
+  color: #212529;
+}
+.redesSociales > p{
+  color: #eef788;
+  font-family:'Lora', serif;
+  margin: 0rem;
+}
+#pago{
+
+grid-area: csgo;
+}
+.legalInfo{
+  grid-area: pago;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+.legalInfo > i{
+
+  font-size: 20px;
+}
+.far{
+  color: #eef788;
+}
+.fab{
+  color: #eef788;
+}
+.redesSociales .icono{
+  width: 30px;
+  height: 30px;
+  border-radius: 2em;
+  box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+  margin: 0 10px;
+  line-height: 30px;
+  font-size: 20px;
+}
+/**Fin del footer*/
+
+/*contacto*/
+#grilla3{
+  display: grid;
+  grid-template-columns:  1fr 1fr 2fr;
+  grid-template-rows: 1.20fr 6.5fr 2fr;
+  grid-template-areas: "nav nav nav"
+                        "form form form" 
+                        "footer footer footer";
+
+  width: 100%;
+  height: auto;
+
+}
+.contacto{
+  font-size: 32px;
+  color: #eef788;
+}
+
+#form{
+  background-image: url(Olivarteee.jpeg);
+}
+form{
+  grid-area: form;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.formInput{
+  margin-bottom: 2px;
+}
+
+
+/*Quienes somos*/
+#grilla4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.2fr 0.8fr 2.5fr 3.4fr 2.7fr 2fr;
+  grid-template-areas: "nav nav"
+                      "titu titu"
+                      "parrafos parrafos"
+                      "media1 media1"
+                      "media2 media2"
+                      "footer footer";
+              
+}
+#historia > p{
+  font-size: 18px;
+  line-height: 20px;
+  align-self: center;
+  grid-area: parrafos;
+}
+   /*galeria*/
+   #media1{
+     grid-area: media1;
+    width: 90%;
+    height: fit-content;
+}
+ #media2{
+   grid-area: media2;
+    width: 90%;
+    height: fit-content;
+    align-self: center;
+}
+/* fin galeria*/
+}
+
+/**dispositivos S*/
+@media only screen and (min-width:600px ){
+   #grilla1{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.4fr 0.8fr 1fr 4fr 5fr 1.2fr;
+    grid-template-areas: "nav nav"
+                        "titu titu"
+                        "parrafos parrafos"
+                        "carrusel carrusel"
+                        "cliente cliente"
+                        "footer footer";
+                
+  } 
+  #titulo{
+    grid-area: titu;
+    height: fit-content;
+    justify-content: center;
+  }
+ #titulo .titulo{
+    font-size: 64px;
+ }
+ #parrafo{
+   grid-area: parrafos;
+ }
+ #parrafo .parrafos{
+    font-size: 32px;
+  }
+
+
+
+
+ /*menu*/
+.menu {
+  font-size: 17px;
+  height: 40px;
+}
+.menu > ul  {
+  flex-direction: row;
+  align-items: center;
+}
+.menu > ul > li > a {
+  margin: 0px 5px;
+}
+#olivArte{  
+  font-size: 30px;
+  height: 30px;
+}
+/*fin de menu*/
+
+/*carrusel*/
+#galeria{
+  grid-area: titulo;
+}
+#carruselo{
+
+  grid-area: carrusel;
+ 
+  align-self: center;
+  width: 100%;
+}
+
+.carousel-inner{
+  height: fit-content;
+  width: 100%;
+}
+
+/*fin carrusel*/
+#clientes{
+  grid-area: cliente;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#clientes .titulo{
+  font-size: 64px;
+}
+.clientesDiv{
+  display: flex;
+  flex-direction: row;
+}
+.clientesDiv > img{
+  height: 200px;
+  width: 200px;
+  border: 2px solid #eef788;
+  border-radius: 98px;
+}
+.clientesP{
+  width: fit-content;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+}
+.clientesDiv .clientesP > p{
+  font-family:'Lora', serif;
+  height: fit-content;
+  font-size: 20px;
+  justify-self: center;
+  align-self: center;
+  color: #4F772D;
+  margin: 0px 20px;
+}
+/*!footer*/
+
+.divFoot{
+  display: flex;
+  justify-content: center;
+
+  height:120px;
+  border-top: 1px rgba(27, 32, 26, 0.979)solid;
+  grid-area: footer;
+}
+.tituloFoot{
+  justify-self: center;
+  align-self: center;
+  width: fit-content;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0%;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "con red legal"
+  "datos redes none";
+  height: 100%;
+  width: 90%;
+}
+.datos{
+grid-area: datos;
+width: fit-content;
+justify-self: center;
+font-family: 'Ubuntu', sans-serif;
+
+}
+.datos > p {
+  width: 100%;
+}
+.redesSociales{
+grid-area: redes;
+height: 100%;
+justify-content:space-evenly;
+align-items: center;
+}
+.icono:hover {
+  color: #212529;
+}
+.redesSociales .icono{
+  width: 40px;
+  height: 40px;
+  border-radius: 2em;
+  box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+  margin: 0 10px;
+  line-height: 40px;
+  font-size: 30px;
+  color: #eef788;
+  text-align: center;
+}
+
+.legalInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+.legalInfo > i{
+  font-size: 30px;
+}
+.far{
+  color: #eef788;
+}
+.fab{
+  color: #eef788;
+}
+
+/**Fin del footer*/
+
+/*contacto*/
+#grilla3{
+  display: grid;
+  grid-template-columns:  1fr 1fr 2fr;
+  grid-template-rows: 0.4fr 6.3fr 1.2fr;
+  grid-template-areas: "nav nav nav"
+                        "form form form" 
+                        "footer footer footer";
+
+  width: 100%;
+  height: auto;
+
+}
+.contacto{
+  color: #eef788;
+  font-size: 32px;
+}
+#form{
+  height: 100%;
+}
+form{
+  grid-area: form;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.formInput{
+  margin-bottom: 2px;
+}
+
+/*Quienes somos*/
+#grilla4{
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-rows: 0.4fr 0.8fr 1fr 4fr 4fr 1.2fr;
+  grid-template-areas: "nav nav nav"
+                        "titu titu titu" 
+                        "parrafos parrafos parrafos"
+                        "media1 media1 media1"
+                        "media2 media2 media2"
+                        "footer footer footer";
+                
+}
+#quienSomos{
+  grid-area: titu;
+  height: fit-content;
+}
+#quienSomos  > h1{
+  font-size: 64px;
+
+}
+#historia{
+  align-self: center;
+
+}
+#historia > p{
+  font-size: 20px;
+  line-height: 20px;
+}
+  /*galeria*/
+  #media1{
+    grid-area: media1;
+    width: 70%;
+    height: 70%;
+    align-self: center;
+  }
+
+  #media2{
+    grid-area: media2;
+    width: 70%;
+    height: 70%;
+    align-self: center;
+  }
+  /* fin galeria*/
+}
+
+/**dispositivos M*/
+@media only screen and (min-width:768px ){
+   #grilla1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr 1fr 4.1fr 6.6fr 1.2fr;
+    grid-template-areas: "nav nav"
+                        "titu titu"
+                        "parrafos parrafos"
+                        "carrusel carrusel"
+                        "cliente cliente"
+                        "footer footer";
+  
+  
+  } 
+  #titulo{
+    grid-area: titu;
+  }
+ #titulo .titulo{
+    font-size: 70px;
+}
+#parrafo{
+  grid-area: parrafos;
+}
+#parrafo .parrafos{
+    font-size: 32px;
+    
+}
+
+  /*menu*/
+  .menu {
+    font-size: 20px;
+    height: 40px;
+  }
+  .menu > ul  {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu > ul > li > a {
+    margin: 0px 10px;
+  }
+
+  #olivArte{  
+    font-size: 35px;
+    height: 34px;
+  }
+  /*fin de menu*/
+
+/*carrusel*/
+#galeria{
+  grid-area: titulo;
+}
+#carruselo{
+
+  grid-area: carrusel;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.carousel-inner{
+  height: fit-content;
+  width: 100%;
+}
+
+/*fin carrusel*/
+/*!footer*/
+
+.divFoot{
+  display: flex;
+  justify-content: center;
+
+  height:120px;
+  border-top: 1px rgba(27, 32, 26, 0.979)solid;
+  grid-area: footer;
+}
+.tituloFoot{
+  justify-self: center;
+  align-self: center;
+  width: fit-content;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0%;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "con red legal"
+  "datos redes none";
+  height: 100%;
+  width: 90%;
+}
+.datos{
+grid-area: datos;
+width: fit-content;
+justify-self: center;
+font-family: 'Ubuntu', sans-serif;
+
+}
+.datos > p {
+  width: 100%;
+}
+.redesSociales{
+grid-area: redes;
+height: 100%;
+justify-content:space-evenly;
+align-items: center;
+}
+.redesSociales .icono{
+
+  color: #eef788;
+  text-align: center;
+}
+.icono:hover {
+  color: #212529;
+}
+.redesSociales > p{
+  color: #eef788;
+  font-family:'Lora', serif;
+  margin: 0rem;
+}
+.legalInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+.legalInfo > i{
+  font-size: 30px;
+}
+.far{
+  color: #eef788;
+}
+.fab{
+  color: #eef788;
+}
+/**Fin del footer*/
+  /*footer*/
+  .redesSociales .icono{
+    width: 40px;
+    height: 40px;
+    border-radius: 2em;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+    margin: 0 10px;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .redesSociales > p{
+    font-size: 20px;
+    
+    margin-right: 10px;
+  }
+  /*Fin del footer*/
+
+
+ /*contacto*/
+  #grilla3{
+    display: grid;
+    grid-template-columns:  1fr 1fr 2fr;
+    grid-template-rows: 0.4fr 7.2fr 1.2fr;
+    grid-template-areas: "nav nav nav"
+                          "form form form" 
+                          "footer footer footer";
+  
+    width: 100%;
+    height: auto;
+
+  }
+  .contacto{
+    color: #eef788;
+    font-size: 32px;
+  }
+  form{
+    grid-area: form;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .formInput{
+    margin-bottom: 2px;
+  }
+
+  /*Quienes somos*/
+
+  #grilla4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.8fr 4fr 3fr 1.2fr;
+    grid-template-areas: "nav  nav"
+                          "titu titu" 
+                          "parrafos media1"
+                          "parrafos media2"
+                          "footer footer";   
+  row-gap: 10px;          
+  }
+  #hisotria{
+    align-self: center;
+  }
+  #historia > p{
+    font-size: 30px;
+    line-height: 30px;
+  }
+  /*galeria*/
+    #media1{
+      grid-area: media1;
+      width: 80%;
+      height: 80%;
+
+    }
+
+  #media2{
+    grid-area: media2;
+    width: 90%;
+    height: 90%;
+
+  }
+    /* fin galeria*/
+}
+
+/**dispositivos L*/
+@media only screen and (min-width:1024px){ 
+    #grilla1{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.5fr 1.6fr 1.3fr 4.6fr 6.6fr 1.3fr;
+    grid-template-areas: "nav nav nav"
+                        "titu titu titu"
+                        "parrafos parrafos parrafos"
+                        "carrusel carrusel carrusel"
+                        "cliente cliente cliente"
+                        "footer footer footer";
+  
+  
+  }
+ 
+  #titulo{
+    grid-area: titu;
+  
+  }
+#titulo > .titulo{
+  font-size: 125px;
+}
+  #parrafo{
+    grid-area: parrafos;
+  }
+  #parrafo > .parrafos{
+    font-size: 40px;
+  }
+  
+  /*menu*/
+
+  .menu {
+    font-size: 25px;
+    height: 50px;
+  }
+  #logo > a{
+    font-size: 50px;
+  }
+  .menu > ul  {
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu > ul > li > a {
+    margin: 0px 10px;
+  }
+  /*fin de menu*/
+
+/*carrusel*/
+  #galeria{
+    grid-area: titulo;
+  }
+  #carruselo{
+
+    grid-area: carrusel;
+    justify-self: flex-start;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .carousel-inner{
+    height: fit-content;
+    width: 100%;
+  }
+
+/*fin carrusel*/
+/*!footer*/
+
+.divFoot{
+  display: flex;
+  justify-content: center;
+
+  height:120px;
+  border-top: 1px rgba(27, 32, 26, 0.979)solid;
+  grid-area: footer;
+}
+.tituloFoot{
+  width: fit-content;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  justify-self: center;
+  align-self: center;
+  margin: 0%;
+}
+footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "con red legal"
+  "datos redes none";
+  height: 100%;
+  width: 90%;
+}
+.datos{
+grid-area: datos;
+width: fit-content;
+justify-self: center;
+font-family: 'Ubuntu', sans-serif;
+
+}
+.datos > p {
+  width: 100%;
+}
+.redesSociales{
+grid-area: redes;
+height: 100%;
+justify-content:space-evenly;
+align-items: center;
+}
+.redesSociales .icono{
+
+  color: #eef788;
+  text-align: center;
+}
+.icono:hover {
+  color: #212529;
+}
+.redesSociales > p{
+  color: #eef788;
+  font-family:'Lora', serif;
+  margin: 0rem;
+}
+.legalInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+.legalInfo > i{
+  font-size: 30px;
+}
+.far{
+  color: #eef788;
+}
+.fab{
+  color: #eef788;
+}
+/**Fin del footer*/
+  /*footer*/
+
+  .redesSociales .icono{
+    width: 40px;
+    height: 40px;
+    border-radius: 2em;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.09);
+    margin: 0 5px;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .redesSociales > p{
+    font-size: 20px;
+    margin-right: 10px;
+
+  }
+  /*Fin del footer*/
+
+
+
+
+
+/*Estilo productos*/
+
+  .grilla2{
+    display: grid;
+    grid-template-columns:  1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 1fr 1fr 3fr 0.5fr;
+    grid-template-areas: "logo nav nav"
+                          "producto1 producto1 producto1" 
+                          "producto2 producto2 producto2"
+                          "carrusel carrusel carrusel"
+                          "footer footer footer";
+  
+    width: 100%;
+    height: auto;
+  }
+
+
+
+/*estilo contacto*/
+  #grilla3{
+    background-size: cover;
+    display: grid;
+    grid-template-columns:  1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 6fr 1.2fr;
+    grid-template-areas: "nav nav nav"
+                          "form form form" 
+                          "footer footer footer";
+  
+    width: 100%;
+    height: auto;
+   
+  }
+  .contacto{
+    font-size: 40px;
+    color: #eef788;
+
+  }
+
+  form{
+    font-family: 'Ubuntu', sans-serif;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .formInput{
+    margin-bottom: 2px;
+  }
+  
+  /*Quienes somos*/
+  
+  #grilla4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 4fr 4fr 1.2fr;
+    grid-template-areas: "nav nav"
+                          "titu titu" 
+                          "parrafos media1"
+                          "parrafos media2"
+                          "footer footer";                   
+  }
+  #historia{
+    align-self: flex-start;
+  }
+#historia > p{
+  font-size: 40px;
+  line-height: 40px;
+  
+}
+/*galeria*/
+#media1{
+  grid-area: media1;
+    width: 80%;
+    height: 80%;
+    align-self: center;
+}
+#media2 {
+  grid-area: media2;
+    width: 80%;
+    height: 80%;
+    align-self: flex-end;
+}
+
+/* fin galeria*/
+}
+
+
+
+
+
