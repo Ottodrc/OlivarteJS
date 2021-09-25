@@ -884,6 +884,7 @@ html{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
     grid-template-areas: "nav nav"
+                        "contenedor contenedor"
                         "aceitunas aceitunas"
                         "clasico clasico"
                         "deluxe deluxe"
@@ -895,6 +896,18 @@ html{
     row-gap: 10px;
     column-gap: 10px;
 }
+#contenedor{
+    grid-area: contenedor;
+    font-size: 32px;
+    background-color: #4F772D;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 2px;
+    justify-self: center;
+    align-self: center;
+    color: #eef788;
+}
+
 .tunas{
     grid-area: aceitunas;
     .tunas__titulo{
@@ -1014,7 +1027,7 @@ html{
            flex-direction: column;
            align-items: center;
            justify-content: space-evenly;
-           width: 50%;
+           width: 60%;
            height: 100%;
    
            .precio{
