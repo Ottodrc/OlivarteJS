@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Rouge+Script&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -63,12 +64,23 @@
       </div>
       <form id="producto">
         <Label class="labelProduct" id="label1" for="aceitunas">Selecciona un relleno:</Label>
-        <input  name="aceitunas" id="aceitunitas" class="forma">
+        <select name="aceitunas" id="aceitunitas" class="forma">
+          <option value="roquefort">Roquefort</option>
+          <option value="holanda">Holanda</option>
+          <option value="cheddar">cheddar</option>
+          <option value="crudo">Jamón crudo</option>
+          <option value="salame">salame</option>
+          <option value="mix quesos">mix de quesos</option>
+          <option value="mix clasico">mix picada</option>
+        </select>
 
          
           <label for="tamanio" id="label2" class="labelProduct">Seleccione tamaño:</label>
-          <input name="tamaño" id="tamanio" class="forma">
-  
+          <select name="tamaño" id="tamanio" class="forma">
+          <option value="chico">Chico (190cc)</option>
+          <option value="grande">Grande (360cc)</option>
+          </select>
+          
            <label for="cant" id="label3" class="labelProduct">Cantidad:</label>
           <input id="cant" type="number" class="forma">
           <br>
@@ -77,9 +89,10 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+<script src="main.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

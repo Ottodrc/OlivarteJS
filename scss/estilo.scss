@@ -48,6 +48,7 @@ ul {
   width: fit-content;
   align-self: center;
   a {
+    margin-left: 10px;
     height: fit-content;
     color: $colorCrema;
     font-family: "Rouge Script", cursive;
@@ -144,7 +145,96 @@ header {
     height: auto;
   }
 }
+#bodie {
+  display: flex;
+  flex-direction: column;
+  #card {
+    margin: 30px 0px 30px 0;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    width: 700px;
+    height: 600px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 3fr 0.5fr 2fr;
+    grid-template-areas:
+      "carrusel carrusel"
+      "precio precio"
+      "datos datos";
 
+    background-color: #eef788;
+    border-radius: 10%;
+    #precioFinal{
+        grid-area: precio;
+        color: #eef788;
+        @include parrafos(20px,20px ,center );
+
+    }
+    #carouselExampleControls {
+      grid-area: carrusel;
+      align-self: center;
+      height: 400px;
+      color: black;
+      img {
+        height: 400px;
+      }
+    }
+
+    #producto {
+      grid-area: datos;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "label1 input1"
+                        "label2 input2"
+                        "label3 input3"
+                        "comprar comprar";
+    
+    #label1{
+        grid-area: label1;
+        justify-self: end;
+    }
+    #label2{
+        grid-area: label2;
+        justify-self: end;
+    }
+    #label3{
+        justify-self: end;
+        grid-area: label3;
+    }
+    #aceitunitas{
+        grid-area: input1;
+    }
+    #tamanio{
+        grid-area: input2;
+    }
+    #cant{
+        grid-area: input3;
+    }
+    #comprar{
+        
+        grid-area: comprar;
+        justify-self:start ;
+    }
+      .labelProduct {
+        justify-self: center;
+        @include parrafos(20px, 20px, flex-start);
+        height: fit-content;
+        align-self: center;
+        width: fit-content;
+      }
+      .forma {
+        align-self: center;
+        width: 50%;
+        border-radius: 5px;
+        margin-left: 10px;
+        &:focus-visible{
+            outline: none;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 600px) {
   #grilla2 {
     display: grid;
@@ -1141,93 +1231,4 @@ header {
     }
   }
 }
-#bodie {
-  display: flex;
-  flex-direction: column;
-  #card {
-    margin: 30px 0px 30px 0;
-    justify-self: center;
-    align-self: center;
-    display: grid;
-    width: 700px;
-    height: 600px;
-    grid-template-columns: 2fr 2fr;
-    grid-template-rows: 3fr 0.5fr 2fr;
-    grid-template-areas:
-      "carrusel carrusel"
-      "precio precio"
-      "datos datos";
 
-    background-color: #eef788;
-    border-radius: 10%;
-    #precioFinal{
-        grid-area: precio;
-        color: #eef788;
-        @include parrafos(20px,20px ,center );
-
-    }
-    #carouselExampleControls {
-      grid-area: carrusel;
-      align-self: center;
-      height: 400px;
-      color: black;
-      img {
-        height: 400px;
-      }
-    }
-
-    #producto {
-      grid-area: datos;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "label1 input1"
-                        "label2 input2"
-                        "label3 input3"
-                        "comprar comprar";
-    
-    #label1{
-        grid-area: label1;
-        justify-self: end;
-    }
-    #label2{
-        grid-area: label2;
-        justify-self: end;
-    }
-    #label3{
-        justify-self: end;
-        grid-area: label3;
-    }
-    #aceitunitas{
-        grid-area: input1;
-    }
-    #tamanio{
-        grid-area: input2;
-    }
-    #cant{
-        grid-area: input3;
-    }
-    #comprar{
-        
-        grid-area: comprar;
-        justify-self:start ;
-    }
-      .labelProduct {
-        justify-self: center;
-        @include parrafos(20px, 20px, flex-start);
-        height: fit-content;
-        align-self: center;
-        width: fit-content;
-      }
-      .forma {
-        align-self: center;
-        width: 50%;
-        border-radius: 5px;
-        margin-left: 10px;
-        &:focus-visible{
-            outline: none;
-        }
-      }
-    }
-  }
-}
