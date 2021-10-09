@@ -88,6 +88,15 @@ for (const iterator of almacenados) {
     localStorage.setItem("productos",JSON.stringify(almacenados))
 }
 
+
+
+
+
+
+
+
+
+
 //captura de envento submit
 let miForm = document.getElementById("producto");
 
@@ -112,20 +121,3 @@ const segundoFiltro = primerFiltro.filter(medida => medida.tamanio == valorTaman
 
 
 
-
-/* //modificando una etiqueta
-var cantidades     = document.getElementsByClassName("cantidad");
-cantidades.innerHTML =
-for (let index = 0; index <=3; index++) {
-
-    for (const element of cantidades) {
-    element.remove()
-}    
-}
-
-var precio = document.getElementsByClassName("precio")
-for (const element of precio) {
-    var nuevaCant = document.createElement("p");
-    nuevaCant.innerHTML = `cant: 19`
-    element.appendChild(nuevaCant)
-} */
