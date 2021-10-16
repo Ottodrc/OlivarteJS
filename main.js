@@ -14,11 +14,6 @@ class Producto {
         this.stock = this.stock + numero
 
   }
-  agregarAlCarro(){
-    let carrito = [];
-
-
-  }
   vender(cantidad) {
     cantidad = parseInt(cantidad)
     if (this.tipo == "ACEITUNAS" && this.tamanio == "GRANDE") {
@@ -31,7 +26,7 @@ class Producto {
 
     if (this.stock > cantidad ) {
       
-      this.stock = (this.stock - 1)*cantidad;
+      this.stock = (this.stock - cantidad);
         $("#precioFinal").empty()
        $("#precioFinal").prepend(`<p id="parrafoVenta">Hola, gracias por comprar ${this.tipo.toLowerCase()} ${this.nombre.toLowerCase()} el precio total es de $${this.precio} </p> x ${cantidad}`);
     } else {
