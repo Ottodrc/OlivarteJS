@@ -87,6 +87,258 @@ header {
   }
 }
 /**fin de menu*/
+.container,
+.container-fluid,
+.row {
+  margin: 0;
+  padding: 0;
+}
+.clasico > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 15px;
+  border: 1px solid rgba($color: #eef788, $alpha: 0.8);
+}
+
+.modal-header {
+  background-color:$verde3;
+  color: $colorCrema;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: $colorCrema;
+  color: $verde3;
+  border: 1px solid;
+}
+
+.btn {
+  background-color: $verde3;
+  color:$colorCrema;
+  border: 1px solid $verde3;
+}
+
+.btn:hover {
+  background-color: $verde1;
+  border: 1px solid $verde1;
+  color: $verde2;
+}
+
+.shop {
+  background-color: $verde1;
+  color: $colorCrema;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  box-shadow: $verde2;
+  border-radius: 5px;
+  font-weight: bold;
+  max-width: 90px;
+  min-width: 80px;
+}
+.product-name {
+  font-size: 1.5em;
+  color:$verde2;
+}
+
+.price {
+  font-size: 2.5em;
+  color: $verde3;
+}
+
+.description {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 50%;
+}
+
+.customer {
+  padding-top: 20px;
+
+ h1 {
+  font-size: 3em;
+  text-align: center;
+  margin: 0px;
+  color: $verde2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: blink;
+}
+}
+.contact-card {
+  text-align: center;
+}
+.delivery {
+  text-align: center;
+}
+
+.form {
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  font-size: 2em;
+  padding: 30px 10px;
+}
+
+.field {
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: rgb(206, 202, 197);
+}
+
+select {
+  font-size: 20px;
+  padding: 5px;
+  background-color: hsl(33, 8%, 79%);
+  max-width: 240px;
+}
+
+input {
+  font-size: 20px;
+  padding: 5px;
+  width: 250px;
+}
+.campoNumerico {
+  width: 240px;
+  background-color: #cecac5;
+  text-align: right;
+}
+
+
+
+
+  
+.error {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.agregar {
+  height: 50px;
+  width: 200px;
+  background-color: $verde1;
+  color:$colorCrema;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  box-shadow: $verde2;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.buton {
+  background-color: $verde1;
+  color:$colorCrema;
+  margin-top: 4px;
+  box-shadow: $verde2;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.form-cliente {
+  text-align: center;
+}
+.info-cliente {
+  border: 1px solid rgb(19, 18, 18);
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.button-p {
+  background-color: rgb(215, 223, 145);
+  opacity: "0.7";
+  color: rgb(34, 1, 30);
+  opacity: "0.7";
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 0px solid black;
+  border-radius: 30px;
+  font-weight: bold;
+  height: 50px;
+  width: 200px;
+  align-self: center;
+}
+
+.pedido-final {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.finalizar-pedido {
+  width: 80%;
+  background-color:$colorHover;
+  color: $colorCrema;
+}
+
+.total {
+  color: $colorCrema;
+  font-size: 20px;
+}
+
+.monto {
+  color: $colorCrema;
+  font-size: 20px;
+}
+
+.items {
+  color: $colorCrema;
+  font-size: 18px;
+}
+
+.icono-eliminar {
+  color: red;
+  cursor: pointer;
+}
+
+.finalizar {
+  height: 50px;
+  width: 300px;
+  background-color: $verde1;
+  color: $colorCrema;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  box-shadow: $verde2;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.form-cliente {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+#costumer{
+h1{
+  font-family: "Ubuntu", sans-serif;
+}
+  }
+
+
+
+
+
+
 
 /*footer*/
 /*!footer*/
@@ -235,594 +487,7 @@ header {
     }
   }
 }
-@media only screen and (max-width: 600px) {
-  #grilla2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1.2fr 14fr 2fr;
-    grid-template-areas:
-      "nav nav nav"
-      "section section section"
-      "footer footer footer";
-  }
-  /*menu*/
 
-  header {
-    grid-area: nav;
-    .menu {
-      .logo {
-        font-size: 64px;
-      }
-      font-size: 15px;
-      height: 120px;
-      .menu__lista {
-        height: 100%;
-        margin: 0%;
-        padding: 0%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-        .menu__item {
-          height: 22px;
-          width: fit-content;
-          .menu__link {
-            margin: 0px 5px;
-          }
-        }
-      }
-    }
-  }
-  /*fin del menu*/
-
-  /*!section*/
-  #pregFrecuentes {
-    @include titulos(50px, 500, normal);
-  }
-  .section {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    .section__article {
-      .section__titulo {
-        @include pregunta(25px, normal, center);
-      }
-      .section__p {
-        @include parrafos(20px, 40px, center);
-      }
-    }
-  }
-  /**fin del section*/
-
-  #grilla1 {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1.2fr 2.1fr 22fr 0.8fr 12fr 2fr 9fr 2fr;
-    grid-template-areas:
-      "nav "
-      "aceitunas"
-      "clasico"
-      "deluxe "
-      "deluxes"
-      "quesos"
-      "quesito"
-      "footer ";
-    row-gap: 10px;
-    column-gap: 10px;
-    overflow-x: hidden;
-  }
-  .tunas {
-    grid-area: aceitunas;
-    .tunas__titulo {
-      @include titulos(($font * 2)+4, normal, normal);
-    }
-    .tunas__parrafo {
-      @include pregunta($font, normal, center);
-    }
-  }
-  #clasico {
-    width: 100%;
-    height: fit-content;
-    grid-area: clasico;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-areas:
-      "uno"
-      "dos"
-      "tres"
-      "cuatro"
-      "cinco"
-      "seis"
-      "siete"
-      "ocho";
-
-    row-gap: 10px;
-    column-gap: 10px;
-
-    .producto {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      border-radius: 2em;
-      width: 80%;
-      height: 300px;
-      background-color: $colorCrema;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 70%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-
-    #roque {
-      grid-area: uno;
-    }
-    #holanda {
-      grid-area: dos;
-    }
-    #cheddar {
-      grid-area: tres;
-    }
-    #crudo {
-      grid-area: cuatro;
-    }
-    #salame {
-      grid-area: cinco;
-    }
-    #mix3 {
-      grid-area: ocho;
-
-      justify-self: center;
-    }
-  }
-
-  #deluxeTitulo {
-    grid-area: deluxe;
-    @include pregunta($font, normal, center);
-    margin: 0;
-    height: fit-content;
-    align-self: flex-end;
-  }
-  #deluxes {
-    width: 100%;
-    grid-area: deluxes;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "nueve"
-      "diez"
-      "once"
-      "doce";
-
-    column-gap: 10px;
-    row-gap: 10px;
-    .producto {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      border-radius: 2em;
-      width: 80%;
-      height: 300px;
-      background-color: $colorCrema;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 70%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-  }
-
-  .quesos__titulo {
-    grid-area: quesos;
-    @include titulos(($font * 2)+4, normal, normal);
-  }
-  #quesito {
-    grid-area: quesito;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .producto {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 75%;
-      border-radius: 2em;
-      height: 310px;
-      background-color: $colorCrema;
-      margin-bottom: 10px;
-      img {
-        width: 75%;
-        height: 75%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-  }
-  /*footer*/
-
-  .divFoot {
-    grid-area: footer;
-    height: fit-content;
-    align-self: end;
-    display: flex;
-    justify-content: center;
-
-    height: 200px;
-    border-top: 1px rgba(27, 32, 26, 0.979) solid;
-    grid-area: footer;
-    footer {
-      background-color: $verde1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 2fr 1fr 2fr;
-      grid-template-areas:
-        "con red"
-        "datos redes"
-        "csgo csgo"
-        "pago pago";
-
-      height: 100%;
-      width: 100%;
-      .tituloFoot {
-        width: fit-content;
-        font-size: 18px;
-        font-family: "Ubuntu", sans-serif;
-        justify-self: center;
-        align-self: center;
-        margin: 0%;
-      }
-      .datos {
-        grid-area: datos;
-        width: fit-content;
-        justify-self: center;
-        font-family: "Ubuntu", sans-serif;
-        font-size: 12px;
-        p {
-          width: 100%;
-        }
-      }
-      .redesSociales {
-        grid-area: redes;
-        height: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-        .icono {
-          color: #eef788;
-          text-align: center;
-          width: 30px;
-          height: 30px;
-          border-radius: 2em;
-          box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.09);
-          margin: 0 10px;
-          line-height: 30px;
-          font-size: 20px;
-          &:hover {
-            color: #212529;
-          }
-        }
-      }
-      #pago {
-        grid-area: csgo;
-      }
-    }
-    .legalInfo {
-      .far {
-        color: #eef788;
-      }
-      .fab {
-        color: #eef788;
-      }
-      grid-area: pago;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      i {
-        font-size: 20px;
-      }
-    }
-  }
-  /**Fin del footer*/
-}
-@media only screen and (min-width: 600px) {
-  #grilla2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 0.4fr 4fr 1.2fr;
-    grid-template-areas:
-      "nav nav nav"
-      "section section section"
-      "footer footer footer";
-  }
-  /*menu*/
-  .olivArte {
-    grid-area: logo;
-    font-size: 30px;
-    height: 30px;
-  }
-  header {
-    grid-area: nav;
-    .menu {
-      font-size: 17px;
-      height: 40px;
-      .menu__lista {
-        height: 100%;
-        margin: 0%;
-        padding: 0%;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        .menu__item {
-          width: fit-content;
-
-          height: fit-content;
-          .menu__link {
-            margin: 0px 5px;
-            font-family: "Lora", serif;
-          }
-        }
-      }
-    }
-  }
-  /*fin del menu*/
-  /*!section*/
-  #pregFrecuentes {
-    @include titulos(64px, 500, normal);
-  }
-  .section {
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    .section__article {
-      .section__titulo {
-        @include pregunta(30px, 500, center);
-      }
-      .section__p {
-        @include parrafos(20px, 40px, center);
-      }
-    }
-  }
-  /**fin del section*/
-
-  /*footer*/
-
-  .divFoot {
-    grid-area: footer;
-    height: fit-content;
-    align-self: end;
-    display: flex;
-    justify-content: center;
-
-    height: 200px;
-    border-top: 1px rgba(27, 32, 26, 0.979) solid;
-    grid-area: footer;
-    footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 2fr;
-      grid-template-areas:
-        "con red legal"
-        "datos redes none";
-      height: 100%;
-      width: 90%;
-      .tituloFoot {
-        width: fit-content;
-        font-size: 22px;
-        font-family: "Ubuntu", sans-serif;
-        justify-self: center;
-        align-self: center;
-        margin: 0%;
-      }
-      .datos {
-        grid-area: datos;
-        width: fit-content;
-        justify-self: center;
-        font-family: "Ubuntu", sans-serif;
-        font-size: 18px;
-        p {
-          width: 100%;
-        }
-      }
-      .redesSociales {
-        grid-area: redes;
-        height: 100%;
-        justify-content: space-evenly;
-        align-items: center;
-        .icono {
-          color: #eef788;
-          text-align: center;
-          width: 40px;
-          height: 40px;
-          border-radius: 2em;
-          box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.09);
-          margin: 0 10px;
-          line-height: 40px;
-          font-size: 30px;
-          &:hover {
-            color: #212529;
-          }
-        }
-      }
-    }
-    .legalInfo {
-      .far {
-        color: #eef788;
-      }
-      .fab {
-        color: #eef788;
-      }
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-      i {
-        font-size: 30px;
-      }
-    }
-  }
-  /**Fin del footer*/
-
-  #grilla1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content;
-    grid-template-areas:
-      "nav nav"
-      "aceitunas aceitunas"
-      "clasico clasico"
-      "deluxe deluxe"
-      "deluxes deluxes"
-      "quesos quesos"
-      "quesito quesito"
-      "footer footer";
-    row-gap: 10px;
-    column-gap: 10px;
-  }
-  .tunas {
-    grid-area: aceitunas;
-    .tunas__titulo {
-      @include titulos(($font * 2)+4, normal, normal);
-    }
-    .tunas__parrafo {
-      @include pregunta($font, normal, center);
-    }
-  }
-  #clasico {
-    width: 100%;
-    grid-area: clasico;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-      "uno dos"
-      "tres cuatro"
-      "cinco seis"
-      "siete ocho";
-
-    row-gap: 10px;
-    column-gap: 10px;
-    .producto {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      border-radius: 2em;
-      width: 90%;
-      height: 300px;
-      background-color: $colorCrema;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 70%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-
-    img {
-      width: 50%;
-    }
-  }
-
-  #deluxeTitulo {
-    grid-area: deluxe;
-    @include pregunta($font, normal, center);
-    margin: 0;
-  }
-  #deluxes {
-    grid-area: deluxes;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "nueve diez"
-      "once doce";
-    column-gap: 10px;
-    row-gap: 10px;
-    .producto {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      border-radius: 2em;
-      width: 90%;
-      height: 300px;
-      background-color: $colorCrema;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 70%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-  }
-
-  .quesos__titulo {
-    grid-area: quesos;
-    @include titulos(($font * 2)+4, normal, normal);
-  }
-  #quesito {
-    grid-area: quesito;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .producto {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 75%;
-      border-radius: 2em;
-      height: 300px;
-      background-color: $colorCrema;
-      margin-bottom: 10px;
-      img {
-        width: 75%;
-        height: 75%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(18px, 18px, center);
-      }
-    }
-  }
-}
 @media only screen and (min-width: 1024px) {
   #grilla2 {
     display: grid;
@@ -942,36 +607,12 @@ header {
   html {
     width: 100%;
   }
-  #grilla1 {
+
+  #clasico{
+    grid-area: clasico;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content;
-    grid-template-areas:
-      "nav nav"
-      "contenedor contenedor"
-      "aceitunas aceitunas"
-      "clasico clasico"
-      "deluxe deluxe"
-      "deluxes deluxes"
-      "quesos quesos"
-      "quesito quesito"
-      "footer footer";
-    grid-auto-rows: auto;
-    row-gap: 10px;
-    column-gap: 10px;
   }
-  #contenedor {
-    grid-area: contenedor;
-    font-size: 32px;
-    background-color: #4f772d;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 2px;
-    justify-self: center;
-    align-self: center;
-    color: #eef788;
-  }
+
 
   .tunas {
     grid-area: aceitunas;
@@ -982,253 +623,4 @@ header {
       @include pregunta($font, normal, center);
     }
   }
-  #clasico {
-    width: 100%;
-    grid-area: clasico;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "uno dos"
-      "tres cuatro"
-      "cinco seis"
-      "siete ocho";
-
-    row-gap: 10px;
-    column-gap: 10px;
-    .producto {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      flex-direction: row;
-      border-radius: 2em;
-      width: 95%;
-      height: 320px;
-      background-color: $colorCrema;
-      justify-content: center;
-      align-items: center;
-
-      .descPrecio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 50%;
-        height: 100%;
-
-        .precio {
-          justify-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          p {
-            width: fit-content;
-            margin: 0;
-          }
-          i {
-            font-size: 20px;
-          }
-        }
-
-        .precioGrandes {
-          justify-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          p {
-            margin: 0;
-            width: fit-content;
-          }
-          i {
-            font-size: 20px;
-          }
-        }
-      }
-      img {
-        width: 50%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(20px, 20px, center);
-      }
-    }
-    #cheddar {
-      grid-area: tres;
-    }
-    #crudo {
-      grid-area: cuatro;
-    }
-    #salame {
-      grid-area: cinco;
-    }
-    #mix1 {
-      grid-area: seis;
-    }
-    #mix2 {
-      grid-area: siete;
-    }
-    #mix3 {
-      grid-area: ocho;
-    }
-
-  }
-
-  #deluxeTitulo {
-    grid-area: deluxe;
-    @include pregunta($font, normal, center);
-    margin: 0;
-  }
-  #deluxes {
-    grid-area: deluxes;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "nueve diez"
-      "once doce";
-
-    .producto {
-      display: flex;
-      flex-direction: row;
-      border-radius: 2em;
-      width: 90%;
-      height: 320px;
-      background-color: $colorCrema;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      .descPrecio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 50%;
-        height: 100%;
-
-        .precio {
-          justify-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          p {
-            margin: 0;
-            width: fit-content;
-          }
-          i {
-            font-size: 20px;
-          }
-        }
-        &::before {
-          overflow: hidden;
-        }
-
-        .precioGrandes {
-          justify-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          p {
-            width: fit-content;
-            margin: 0;
-          }
-          i {
-            font-size: 20px;
-          }
-        }
-      }
-      img {
-        width: 50%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(20px, 20px, center);
-      }
-
-      #almendras {
-        grid-area: nueve;
-        width: 90%;
-      }
-      #capresse {
-        grid-area: diez;
-        width: 90%;
-      }
-      #palmitos {
-        grid-area: once;
-        width: 90%;
-      }
-      #ajo {
-        grid-area: doce;
-        width: 90%;
-      }
-    }
-  }
-
-  .quesos__titulo {
-    grid-area: quesos;
-    @include titulos(($font * 2)+4, normal, normal);
-  }
-  #quesito {
-    grid-area: quesito;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .producto {
-      display: flex;
-      flex-direction: row;
-      width: 75%;
-      border-radius: 2em;
-      height: 320px;
-      background-color: $colorCrema;
-      margin-bottom: 10px;
-      justify-content: center;
-      align-items: center;
-
-      .descPrecio {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 60%;
-        height: 100%;
-
-        .precio {
-          justify-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          width: 100%;
-          p {
-            width: fit-content;
-            margin: 0;
-          }
-          i {
-            font-size: 20px;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-      p {
-        height: fit-content;
-        margin: 0px 5px;
-        @include parrafos(20px, 20px, center);
-      }
-    }
-  }
 }
-
